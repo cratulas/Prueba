@@ -2,10 +2,10 @@
     <tr>
         <td><%= booksmark.name %></td>
         <td><%= booksmark.url %></td>
-        <td><%= booksmark.assemblies %></td>
-        <td><%= booksmark.relations %></td>
+        <td><%= booksmark.assemblies[0] %></td>
+        <td><%= booksmark.relations[0] %></td>
         <td><%= link_to 'Show', booksmark , remote: true %></td>
         <td><%= link_to 'Edit', edit_booksmark_path(booksmark) , remote: true%></td>
-        <td><%= link_to 'Destroy', booksmark, method: :delete, data: { confirm: 'Are you sure?' }%></td>
+        <td><%= link_to 'Destroy', booksmark, method: :delete, data: { confirm: 'Are you sure?' }, remote: true%></td>
     </tr>
 <% end %>

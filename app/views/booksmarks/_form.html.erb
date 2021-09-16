@@ -21,6 +21,14 @@
     <%= form.text_field :url %>
   </div>
 
+   <div class="links">
+    <%= link_to_add_association 'add category', form, :assemblies, partial: 'assemblies_fields' %>
+  </div>
+
+  <div class="links">
+    <%= link_to_add_association 'add type', form, :relations, partial: 'relations_fields' %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

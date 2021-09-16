@@ -1,0 +1,9 @@
+<div class="nested-fields">
+    <div class="field">
+        <%= f.label :category_id %>
+        <%= f.collection_select :category_id, @categories,:id, :name %>
+    </div>
+    <div class="links">
+        <%= link_to_remove_association "remove task", f %>
+    </div>
+</div>

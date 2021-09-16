@@ -13,10 +13,19 @@ class BooksmarksController < ApplicationController
   # GET /booksmarks/new
   def new
     @booksmark = Booksmark.new
+    
+    @categories = Category.all
+    @booksmark.assemblies.build
+
+    @types = Type.all
+    @booksmark.relations.build
   end
 
   # GET /booksmarks/1/edit
   def edit
+    @categories = Category.all
+    @types = Type.all
+    @booksmarks = Booksmark.all
   end
 
   # POST /booksmarks or /booksmarks.json
@@ -67,6 +76,8 @@ class BooksmarksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def booksmark_params
-      params.require(:booksmark).permit(:name, :url)
+      params.require(:booksmark).permit(:name, :url,{categories_attributes: [:name, :visibility]},{assemblies_attributes:[:id, :category_id, :_destroy]},{types_attributes: [:name]}, {relations_attributes:[:id, :type_id, :_destroy]}, {type_ids: []})
     end
+
+
 end

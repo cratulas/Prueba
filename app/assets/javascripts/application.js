@@ -13,7 +13,7 @@
 //= require rails-ujs
 //= require activestorage
 //= require jquery/dist/jquery
-
+//= require cocoon
 //= require best_in_place.jquery-ui
 //= require popper
 //= require bootstrap
