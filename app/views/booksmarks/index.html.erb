@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+
+<h1 class ="text-center">Booksmarks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Url</th>
+      <th>assemblies</th>
+      <th>relations</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+    
+    <tbody id="data">
+      <%= render('booksmarks/data') %>
+    </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Booksmark', new_booksmark_path, remote: true, class: "btn btn-primary"%>
+
+<div id="createData" class = "my-5"></div>
+
+<div id="showData"></div>
+
+
+</div>
+
+
