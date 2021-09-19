@@ -1,4 +1,5 @@
 class Category < ApplicationRecord
     has_ancestry
-    has_and_belongs_to_many :booksmark
+    has_many :assemblies
+    has_many :booksmarks, through: :assemblies, dependent: :destroy
 end

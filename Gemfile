@@ -20,6 +20,8 @@ gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'mast
 gem 'bootstrap', '~> 4.3.1'
 gem 'best_in_place', '~> 3.0.1'
 gem 'cocoon'
+gem 'chartkick'
+gem 'groupdate'
 # gem 'jquery-rails'
 # gem 'devise'
 # gem 'rails_admin', '~> 2.0'
